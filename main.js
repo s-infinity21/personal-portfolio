@@ -1,13 +1,16 @@
-$(document).ready(function () {
-	$(window).scroll(function () {
+function myFunction() {
+	var nav = document.getElementById('navbar');
+	var menu = document.getElementById('menu');
+
+	window.addEventListener('scroll', function () {
 		if (this.scrollY > 20) {
-			$('.navbar').addClass('sticky');
+			nav.classList.add('sticky');
 		} else {
-			$('.navbar').removeClass('sticky');
+			nav.classList.remove('sticky');
 		}
 	});
-	$('.menu-btn').click(function () {
-		$('.navbar .menu').toggleClass('active');
-		$('.menu-btn i').toggleClass('active');
+
+	window.addEventListener('click', function () {
+		menu.classList.toggle('active');
 	});
-});
+}
