@@ -11,12 +11,18 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-		<!-- JQuery script -->
+		<!-- JS script -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		/>
 	</head>
-	<body>
+	<body onload="myFunction()">
 		<!--NAVBAR--nav.navbar-->
-		<nav class="navbar">
+		<nav class="navbar" id="navbar">
 			<!--div.max-width-->
 			<div class="max-width">
 				<!--div.logo>a-->
@@ -24,7 +30,7 @@
 					<a href="#">Portfo<span>lio</span></a>
 				</div>
 				<!--ul.menu>li*6>a-->
-				<ul class="menu">
+				<ul class="menu" id="menu">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Services</a></li>
@@ -32,11 +38,12 @@
 					<li><a href="#">Team</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-				<div class="menu-btn">
+				<div class="menu-btn" onclick="toggleNavbar()">
 					<i class="fa fa-bars"> </i>
 				</div>
 			</div>
 		</nav>
+
 		<!--Home Page--section.home#home-->
 		<section class="home" id="home">
 			<div class="max-width">
@@ -71,6 +78,174 @@
 						<a href="#">Download Resume</a>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!--Services Page-->
+		<section class="services" id="services">
+			<div class="max-width">
+				<h2 class="title">Services</h2>
+				<div class="services-content">
+					<div class="card">
+						<div class="box">
+							<i class="fa fa-paint-brush"> </i>
+							<div class="text">Graphic Designs</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Incidunt error, aliquid esse alias iure recusandae.
+							</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="box">
+							<i class="fa fa-wrench custom"></i>
+							<div class="text">Backend Project</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Incidunt error, aliquid esse alias iure recusandae.
+							</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="box">
+							<i class="fa fa-code"> </i>
+							<div class="text">Frontend Project</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Incidunt error, aliquid esse alias iure recusandae.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section class="skills" id="skills">
+			<div class="max-width">
+				<h2 class="title">My Skills</h2>
+				<div class="skills-content">
+					<div class="column left">
+						<div class="text">My Creative Skills and Experiences</div>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+							voluptate, molestias quas laborum excepturi quibusdam atque, amet,
+							necessitatibus hic laboriosam aspernatur maiores laudantium
+							voluptatem? Amet quo explicabo facere quis! Placeat facere
+							veritatis alias! Et, at vel. Dolores quos id libero molestias
+							eveniet quas maiores odio culpa a, sed quibusdam est sunt.
+							Excepturi eum, laborum optio ipsum nihil fugiat consequuntur
+							recusandae?
+						</p>
+						<a href="#">Read More</a>
+					</div>
+					<div class="column right">
+						<div class="bars">
+							<div class="info">
+								<span>HTML</span>
+								<span>90%</span>
+							</div>
+							<div class="line html"></div>
+						</div>
+						<div class="bars">
+							<div class="info">
+								<span>CSS</span>
+								<span>60%</span>
+							</div>
+							<div class="line css"></div>
+						</div>
+						<div class="bars">
+							<div class="info">
+								<span>JavaScript</span>
+								<span>80%</span>
+							</div>
+							<div class="line js"></div>
+						</div>
+						<div class="bars">
+							<div class="info">
+								<span>ReactJs</span>
+								<span>20%</span>
+							</div>
+							<div class="line react"></div>
+						</div>
+						<div class="bars">
+							<div class="info">
+								<span>Node.Js and Express.Js</span>
+								<span>45%</span>
+							</div>
+							<div class="line node"></div>
+						</div>
+						<div class="bars">
+							<div class="info">
+								<span>MongoDB</span>
+								<span>20%</span>
+							</div>
+							<div class="line db"></div>
+						</div>
+						<div class="bars">
+							<div class="info">
+								<span>Adobe Photoshop CS6</span>
+								<span>60%</span>
+							</div>
+							<div class="line photoshop"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Section -->
+		<section class="team" id="team">
+			<div class="max-width">
+				<h2 class="title">My Team</h2>
+				<div class="carousel owl-carousel">
+					<div class="card">
+						<div class="box">
+							<img src="images/p1.jpg" alt="profile1" />
+							<div class="text">Someone's Name 1</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="box">
+							<img src="images/p1.jpg" alt="profile1" />
+							<div class="text">Someone's Name 2</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="box">
+							<img src="images/p1.jpg" alt="profile1" />
+							<div class="text">Someone's Name 3</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="box">
+							<img src="images/p1.jpg" alt="profile1" />
+							<div class="text">Someone's Name 4</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="box">
+							<img src="images/p1.jpg" alt="profile1" />
+							<div class="text">Someone's Name 5</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-content">
+					<div class="column left"></div>
+					<div class="column right"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact" id="contact">
+			<div class="max-width">
+				<h2 class="title">Contact Me</h2>
 			</div>
 		</section>
 
