@@ -13,6 +13,7 @@
 		/>
 		<!-- JS script -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 		<link
@@ -21,6 +22,9 @@
 		/>
 	</head>
 	<body onload="myFunction()">
+		<div class="scroll-up-btn" id="scroll-up-btn" onclick="scrollUp()">
+			<i class="fa fa-angle-up"></i>
+		</div>
 		<!--NAVBAR--nav.navbar-->
 		<nav class="navbar" id="navbar">
 			<!--div.max-width-->
@@ -31,12 +35,12 @@
 				</div>
 				<!--ul.menu>li*6>a-->
 				<ul class="menu" id="menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Skill</a></li>
-					<li><a href="#">Team</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#home" class="menu-btn">Home</a></li>
+					<li><a href="#about" class="menu-btn">About</a></li>
+					<li><a href="#services" class="menu-btn">Services</a></li>
+					<li><a href="#skills" class="menu-btn">Skills</a></li>
+					<li><a href="#team" class="menu-btn">Team</a></li>
+					<li><a href="#contact" class="menu-btn">Contact</a></li>
 				</ul>
 				<div class="menu-btn" onclick="toggleNavbar()">
 					<i class="fa fa-bars"> </i>
@@ -50,7 +54,7 @@
 				<div class="home-content">
 					<div class="text-1">Hello, My name is</div>
 					<div class="text-2">Shubh Chaurasia</div>
-					<div class="text-3">I am a <span>Developer</span></div>
+					<div class="text-3">I am a <span class="typing"></span></div>
 					<a href="#">Hire Me</a>
 				</div>
 			</div>
@@ -65,7 +69,9 @@
 						<img src="images/profile1.jpeg" alt="Profile Image" />
 					</div>
 					<div class="column right">
-						<div class="text">I am Shubh and I am a <span>Developer</span></div>
+						<div class="text">
+							I am Shubh and I am a <span class="typing2"></span>
+						</div>
 						<p>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
 							debitis qui distinctio asperiores, aut numquam tenetur quis quia
@@ -308,6 +314,14 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Footer Section -->
+		<footer>
+			<span>
+				Created By <a href="#">Shubh Chaurasia</a> |
+				<span class="fa fa-copyright"></span> 2021 All Rights Reserved</span
+			>
+		</footer>
 
 		<script src="main.js"></script>
 	</body>
